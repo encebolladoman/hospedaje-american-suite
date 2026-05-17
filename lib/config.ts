@@ -3,8 +3,21 @@
 // ============================================
 // Este archivo contiene toda la informacion del hospedaje
 // para facilitar futuras actualizaciones.
+//
+// COMO EDITAR IMAGENES:
+// 1. Sube tu imagen a un servicio de hosting (ej: Vercel Blob, Cloudinary, etc.)
+// 2. Copia la URL de la imagen
+// 3. Reemplaza el valor de "src" con la nueva URL
+// 4. Actualiza el "alt" con una descripcion de la imagen
+//
+// EJEMPLO:
+// {
+//   src: "https://tu-url.com/imagen.jpg",
+//   alt: "Descripcion de la imagen",
+// }
+// ============================================
 
-import { Wind, Wifi, Bath, Tv, Coffee, Users, Refrigerator } from "lucide-react"
+import { Wind, Wifi, Bath, Tv, Coffee, Users, Refrigerator, Microwave } from "lucide-react"
 
 // ============================================
 // INFORMACION GENERAL
@@ -49,6 +62,68 @@ export function getWhatsAppLink(phone: string, message: string): string {
 }
 
 // ============================================
+// IMAGENES DE SUITE ESPECIAL
+// Para agregar/editar: Cambia "src" por la URL de tu imagen
+// ============================================
+const suiteEspecialImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%201-ICjbPXIaeAXOe4A1DG7mYzekyB3gLi.jpeg",
+    alt: "Suite Especial - Vista de las camas",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%202-5o6WX6lKo0HAx3ZYx3xu5dUAXzLY1v.jpeg",
+    alt: "Suite Especial - Area de comedor con orquidea",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%203-6IGhZ2h2mTPGpLHuIdrZOSTVybLCHX.jpeg",
+    alt: "Suite Especial - Vista amplia con aire acondicionado",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%204-ncrpyhzr0lh95ypvaTjmrgtGwKdQDO.jpeg",
+    alt: "Suite Especial - Vista lateral de las camas",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%205-TT7W04N6uIFSztTqFnpmwuRME9ofaK.jpeg",
+    alt: "Suite Especial - Mesa de comedor completa",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%206-xyyCjTHUwSh0mJ29vh9HdYR0ME257t.jpeg",
+    alt: "Suite Especial - Terraza con vista a la calle",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%207-x4dVa6H0wmiwy6udywxLB93vDVflYe.jpeg",
+    alt: "Suite Especial - Terraza nocturna",
+  },
+]
+
+// ============================================
+// IMAGENES DE SUITE ESTANDAR
+// Para agregar/editar: Cambia "src" por la URL de tu imagen
+// ============================================
+const suiteEstandarImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%201-XvpLxok66vVwPlzLlUQPAPfUSUc01T.jpeg",
+    alt: "Suite Estandar - Vista de la cama con ventana",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%202-6b5Yln7DPDmZiP2cUyV0zur3p9zt8o.jpeg",
+    alt: "Suite Estandar - Vista con bano privado",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%203-1OnHZJ6LfdEFV3rqbwO8R06IzVjYrB.jpeg",
+    alt: "Suite Estandar - Mesita de noche con controles",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%204-oHbswDnuzlOtGOWXdFeGTCs2Vl6hhN.jpeg",
+    alt: "Suite Estandar - Terraza exterior nocturna",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%205-rJOQiEo54y5wgX4UgJITtDXAXqwSCs.jpeg",
+    alt: "Suite Estandar - Vista frontal de la cama",
+  },
+]
+
+// ============================================
 // CONFIGURACION DE HABITACIONES
 // ============================================
 export const rooms = [
@@ -57,32 +132,12 @@ export const rooms = [
     name: "Suite Especial",
     description: "Amplia suite con todas las comodidades para una estadia confortable.",
     locationNote: "Ubicada en el segundo piso",
-    images: [
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%201-b6nV3PZ5FsDetUe4sWTa9ay53dRp0r.jpeg",
-        alt: "Suite Especial - Vista de las camas",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%202-QA4ntr8Mv1WM11Wr8W7qvTZcw7Wwvn.jpeg",
-        alt: "Suite Especial - Area de comedor",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%203-tnHqPlGZlQUC3Fn1wySrcL6mfNeyOr.jpeg",
-        alt: "Suite Especial - Vista amplia",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%204-CZYHUywgB0pxZNq6OoPNdXMUKfmi04.jpeg",
-        alt: "Suite Especial - Vista lateral",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%205-zRrqquiVdElVO7DJyvjRohiKl1TNJI.jpeg",
-        alt: "Suite Especial - Mesa de comedor",
-      },
-    ],
+    images: suiteEspecialImages,
     amenities: [
       { icon: Users, text: "Cama de dos plazas" },
       { icon: Users, text: "Cama de plaza y media" },
       { icon: Refrigerator, text: "Nevera" },
+      { icon: Microwave, text: "Microondas" },
       { icon: Coffee, text: "Tetera electrica" },
       { icon: Wifi, text: "WiFi" },
       { icon: Wind, text: "Aire acondicionado" },
@@ -97,20 +152,7 @@ export const rooms = [
     name: "Suite Estandar",
     description: "Suite comoda y bien equipada para tu descanso.",
     locationNote: "Ubicada en el segundo piso",
-    images: [
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%203-EJvNAuntAYCz4oQ9gClFpOGiF8xhXq.jpeg",
-        alt: "Suite Estandar - Mesita de noche",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%204-O8gGLjctQpyLNdhrnaAI2pnPaHfzYV.jpeg",
-        alt: "Suite Estandar - Terraza exterior",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%205-emFrJeeh1PIpSVtJmfDZMKFSxWzx0k.jpeg",
-        alt: "Suite Estandar - Vista de la cama",
-      },
-    ],
+    images: suiteEstandarImages,
     amenities: [
       { icon: Users, text: "Cama de dos plazas" },
       { icon: Coffee, text: "Tetera electrica" },
@@ -126,40 +168,12 @@ export const rooms = [
 
 // ============================================
 // IMAGENES DE GALERIA
+// Combina automaticamente las imagenes de ambas suites
+// Para agregar imagenes adicionales, anade objetos al array
 // ============================================
 export const galleryImages = [
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%201-b6nV3PZ5FsDetUe4sWTa9ay53dRp0r.jpeg",
-    alt: "Suite Especial - Vista de las camas",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%203-tnHqPlGZlQUC3Fn1wySrcL6mfNeyOr.jpeg",
-    alt: "Suite Especial - Vista amplia",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%202-QA4ntr8Mv1WM11Wr8W7qvTZcw7Wwvn.jpeg",
-    alt: "Suite Especial - Area de comedor",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%204-CZYHUywgB0pxZNq6OoPNdXMUKfmi04.jpeg",
-    alt: "Suite Especial - Vista lateral",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%205-zRrqquiVdElVO7DJyvjRohiKl1TNJI.jpeg",
-    alt: "Suite Especial - Mesa de comedor",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%203-EJvNAuntAYCz4oQ9gClFpOGiF8xhXq.jpeg",
-    alt: "Suite Estandar - Mesita de noche",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%204-O8gGLjctQpyLNdhrnaAI2pnPaHfzYV.jpeg",
-    alt: "Suite Estandar - Terraza exterior",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%205-emFrJeeh1PIpSVtJmfDZMKFSxWzx0k.jpeg",
-    alt: "Suite Estandar - Vista de la cama",
-  },
+  ...suiteEspecialImages,
+  ...suiteEstandarImages,
 ]
 
 // ============================================
