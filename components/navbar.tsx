@@ -1,19 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { Menu, X, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#habitaciones", label: "Habitaciones" },
-  { href: "#ubicacion", label: "Ubicación" },
-  { href: "#galeria", label: "Galería" },
-  { href: "#faq", label: "Preguntas frecuentes" },
-  { href: "#contacto", label: "Contacto" },
-]
+import { siteConfig, whatsappConfig, whatsappMessages, getWhatsAppLink, navLinks } from "@/lib/config"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,15 +13,11 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20Blue%20House-VdT2LzSzxm1BaiMJCemxJv2pp1qB4e.jpg"
-            alt="Blue House Hospedaje Logo"
-            width={40}
-            height={40}
-            className="rounded-full"
-          />
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-lg">
+            AS
+          </div>
           <span className="hidden font-semibold text-foreground sm:inline-block">
-            Blue House Hospedaje
+            {siteConfig.name}
           </span>
         </Link>
 
@@ -40,7 +27,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary"
             >
               {link.label}
             </Link>
@@ -50,10 +37,10 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Button
             asChild
-            className="hidden bg-primary text-primary-foreground hover:bg-primary/90 sm:flex"
+            className="hidden bg-primary text-primary-foreground transition-all duration-200 hover:bg-primary/90 hover:shadow-md sm:flex"
           >
             <a
-              href="https://wa.me/593968117731"
+              href={getWhatsAppLink(whatsappConfig.primary.international, whatsappMessages.general)}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -83,7 +70,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-primary"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -94,7 +81,7 @@ export function Navbar() {
               className="mt-2 w-full bg-primary text-primary-foreground hover:bg-primary/90"
             >
               <a
-                href="https://wa.me/593968117731"
+                href={getWhatsAppLink(whatsappConfig.primary.international, whatsappMessages.general)}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -9,12 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Blue House Hospedaje | Cerca del Consulado de Estados Unidos en Guayaquil',
-  description: 'Hospedaje seguro y cómodo en Guayaquil, Ecuador. Ubicado a solo 8 minutos caminando del Consulado de Estados Unidos. Habitaciones con aire acondicionado, WiFi y baño privado.',
-  keywords: 'hospedaje guayaquil, hotel cerca consulado estados unidos, alojamiento guayaquil, blue house hospedaje, visa americana guayaquil',
+  title: 'Hospedaje American Suites | Cerca del Consulado de Estados Unidos en Guayaquil',
+  description: 'Hospedaje seguro y comodo en Guayaquil, Ecuador. Ubicado a solo 8 minutos caminando del Consulado de Estados Unidos. Suites con aire acondicionado, WiFi y bano privado.',
+  keywords: 'hospedaje guayaquil, hotel cerca consulado estados unidos, alojamiento guayaquil, hospedaje american suites, visa americana guayaquil',
   openGraph: {
-    title: 'Blue House Hospedaje | Cerca del Consulado de Estados Unidos',
-    description: 'Hospedaje seguro y cómodo a 8 minutos del Consulado de Estados Unidos en Guayaquil',
+    title: 'Hospedaje American Suites | Cerca del Consulado de Estados Unidos',
+    description: 'Hospedaje seguro y comodo a 8 minutos del Consulado de Estados Unidos en Guayaquil',
     locale: 'es_EC',
     type: 'website',
   },
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth bg-background">
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
         <Analytics />
