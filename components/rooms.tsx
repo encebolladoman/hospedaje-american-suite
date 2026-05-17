@@ -2,10 +2,10 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react"
+import { MessageCircle, ChevronLeft, ChevronRight, Coffee, Printer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { rooms, whatsappConfig, getWhatsAppLink } from "@/lib/config"
+import { rooms, whatsappConfig, getWhatsAppLink, additionalServices } from "@/lib/config"
 
 function RoomImageCarousel({ images, name }: { images: { src: string; alt: string }[]; name: string }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -159,6 +159,33 @@ export function Rooms() {
               </CardFooter>
             </Card>
           ))}
+        </div>
+
+        {/* Servicios Adicionales Card */}
+        <div className="mt-8 flex justify-center">
+          <Card className="w-full max-w-md border-border/50 bg-card transition-all duration-200 hover:border-primary/30 hover:shadow-lg">
+            <CardContent className="flex flex-col items-center p-6 text-center">
+              <div className="mb-4 flex gap-2">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <Coffee className="h-6 w-6 text-primary" />
+                </div>
+                <div className="rounded-full bg-primary/10 p-3">
+                  <Printer className="h-6 w-6 text-primary" />
+                </div>
+              </div>
+              <h3 className="mb-3 font-semibold text-foreground">
+                Servicios adicionales
+              </h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {additionalServices.map((service, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

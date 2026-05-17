@@ -17,7 +17,7 @@
 // }
 // ============================================
 
-import { Wind, Wifi, Bath, Tv, Coffee, Users, Refrigerator, Microwave } from "lucide-react"
+import { Wind, Wifi, Bath, Tv, Coffee, Users, Refrigerator, Microwave, UtensilsCrossed, Armchair, Home } from "lucide-react"
 
 // ============================================
 // INFORMACION GENERAL
@@ -94,6 +94,30 @@ const suiteEspecialImages = [
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%207-x4dVa6H0wmiwy6udywxLB93vDVflYe.jpeg",
     alt: "Suite Especial - Terraza nocturna",
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%208-F4oOiGe7lWBydsCQ4iBKXyicL1pESy.jpeg",
+    alt: "Suite Especial - Vista exterior del edificio",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%209-DcOkJYH6A6jt2R4RxS8wYYw1Z1WcRN.jpeg",
+    alt: "Suite Especial - Balcon amplio con vista",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%2010-1eEkq6D4hpXZ936c4AHr4ZBadqEAPK.jpeg",
+    alt: "Suite Especial - Nevera y utensilios de cocina",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%2011-O6ofX0BfoqAfThant4v8S8udB0Zrqm.jpeg",
+    alt: "Suite Especial - Area de cocina con nevera y microondas",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%2012-7YcF4klCm0jQx55I5TWLBAkDvxt1B5.jpeg",
+    alt: "Suite Especial - Bano privado con ducha",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20especial%20imagen%2013-o3tdiBiSJ1U1bDMzVhDWkCXmhwjvf8.jpeg",
+    alt: "Suite Especial - Fachada frontal del hospedaje",
+  },
 ]
 
 // ============================================
@@ -121,6 +145,26 @@ const suiteEstandarImages = [
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%205-rJOQiEo54y5wgX4UgJITtDXAXqwSCs.jpeg",
     alt: "Suite Estandar - Vista frontal de la cama",
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%206-BawoMb0ErGEuNTK3wz5qKT30xYmAnQ.jpeg",
+    alt: "Suite Estandar - Bano privado",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%207-Iz8vAzxDxlICv2SZ3MKW4uxTyMsKDO.jpeg",
+    alt: "Suite Estandar - TV y aire acondicionado",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%208-P94IuPrdyo3Q2UTabbCZBmBaoO8Wh9.jpeg",
+    alt: "Suite Estandar - Meson de cocina con lava copas",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%209-IAVsWimx8KeevhKMsDLrLeEnPIscQq.jpeg",
+    alt: "Suite Estandar - Balcon con vista a la calle",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/suite%20estandar%20imagen%2010-OZXsekowF2azWWM9oCZ4obKPyKs84D.jpeg",
+    alt: "Suite Estandar - Fachada frontal del hospedaje",
+  },
 ]
 
 // ============================================
@@ -139,6 +183,10 @@ export const rooms = [
       { icon: Refrigerator, text: "Nevera" },
       { icon: Microwave, text: "Microondas" },
       { icon: Coffee, text: "Tetera electrica" },
+      { icon: Home, text: "Area de cocina" },
+      { icon: Armchair, text: "Area de comedor" },
+      { icon: UtensilsCrossed, text: "Utensilios de cocina (platos, tazas, vasos, cucharas)" },
+      { icon: Home, text: "Balcon amplio" },
       { icon: Wifi, text: "WiFi" },
       { icon: Wind, text: "Aire acondicionado" },
       { icon: Tv, text: "TV" },
@@ -156,6 +204,8 @@ export const rooms = [
     amenities: [
       { icon: Users, text: "Cama de dos plazas" },
       { icon: Coffee, text: "Tetera electrica" },
+      { icon: Home, text: "Meson de cocina con lava copas" },
+      { icon: Home, text: "Balcon" },
       { icon: Wifi, text: "WiFi" },
       { icon: Wind, text: "Aire acondicionado" },
       { icon: Tv, text: "TV" },
@@ -164,6 +214,14 @@ export const rooms = [
     whatsappMessage: whatsappMessages.suiteEstandar,
     featured: false,
   },
+]
+
+// ============================================
+// SERVICIOS ADICIONALES
+// ============================================
+export const additionalServices = [
+  "Desayunos tipo continental, bajo pedido",
+  "Servicio de copias e impresion",
 ]
 
 // ============================================
