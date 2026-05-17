@@ -4,45 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const galleryImages = [
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%201%20imagen%201-G8oKLrNqJ4Wzkmch51PpI0o9BghIKJ.jpeg",
-    alt: "Habitación Estándar - Vista principal",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%201%20imagen%203-80QMiQ1UfV3AJ0jf5OPcOmgOf52qKg.jpeg",
-    alt: "Habitación Estándar - Vista amplia",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%202%20imagen%201-oCKUmgNmYUrhmM4rF9EQSOqW9QafUp.jpeg",
-    alt: "Habitación Equipada - Vista principal",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%202%20imagen%202-RM6zjrMoJaK88hvMMlUROR9kcoyGFU.jpeg",
-    alt: "Habitación Equipada - Vista completa",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%202%20imagen%203-mpLKAHNWYZ8lZ5zBoq2SiMriXNsmYV.jpeg",
-    alt: "Habitación Equipada - Área de estar",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%203%20imagen%201-iumornYNUmQuCQH81fHMHjqiv794NM.jpeg",
-    alt: "Habitación Familiar - Vista principal",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%203%20imagen%202-ffqhPbTikkbSQOVPeOozR9Viuok5TY.jpeg",
-    alt: "Habitación Familiar - Literas",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%203%20imagen%203-ysprTTmlWbEUorMCjBHmjhVAQ6IOWj.jpeg",
-    alt: "Habitación Familiar - Vista completa",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Habitacion%201%20imagen%202-jpDey2a1YBbIc927bYiBdNRGuQaNyS.jpeg",
-    alt: "Terraza con área de descanso",
-  },
-]
+import { galleryImages } from "@/lib/config"
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
@@ -76,10 +38,10 @@ export function Gallery() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Galería
+            Galeria
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Conoce nuestras instalaciones y habitaciones
+            Conoce nuestras instalaciones y suites
           </p>
         </div>
 

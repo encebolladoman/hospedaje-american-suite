@@ -5,7 +5,7 @@ const features = [
   {
     icon: Shield,
     title: "Sector seguro",
-    description: "Urbanización privada con garita y guardias.",
+    description: "Urbanizacion privada con garita y guardias.",
   },
   {
     icon: MapPin,
@@ -14,13 +14,13 @@ const features = [
   },
   {
     icon: Bed,
-    title: "Habitaciones cómodas",
+    title: "Suites comodas",
     description: "Espacios amplios para descansar.",
   },
   {
     icon: Wifi,
     title: "Servicios incluidos",
-    description: "WiFi, aire acondicionado y baño privado.",
+    description: "WiFi, aire acondicionado y bano privado.",
   },
 ]
 
@@ -33,7 +33,7 @@ export function Features() {
             Ventajas del hospedaje
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Todo lo que necesitas para una estadía cómoda y tranquila
+            Todo lo que necesitas para una estadia comoda y tranquila
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export function Features() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="border-border/50 bg-card transition-all duration-300 hover:border-primary/30 hover:shadow-lg"
+              className="border-border/50 bg-card transition-all duration-200 hover:border-primary/30 hover:shadow-lg"
             >
               <CardContent className="flex flex-col items-center p-6 text-center">
                 <div className="mb-4 rounded-full bg-primary/10 p-3">
